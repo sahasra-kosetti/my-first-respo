@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DreamStay Hotel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <center>
+      <h1>DreamStay Hotel</h1>
+      <nav>
+        <button data-page="home" class="nav-btn">Home</button>
+        <button data-page="rooms" class="nav-btn">Rooms</button>
+        <button data-page="book" class="nav-btn">Book</button>
+        <button data-page="bookings" class="nav-btn">My Bookings</button>
+      </nav>
+    </div>
+  </center>
+  </header>
+
+  <main class="wrap">
+    <!-- HOME -->
+<section id="page-home" class="page active">
+  <div class="hero-text-only">
+    <h2>Welcome to DreamStay Hotel</h2>
+    <p>
+      At <strong>DreamStay</strong>, we believe every journey should be wrapped in comfort and luxury.  
+      Our hotel offers modern rooms, delicious cuisine, and a relaxing environment that makes your stay memorable.
+    </p>
+    <p>
+      Whether you’re traveling solo, with family, or on business, we provide the perfect mix of convenience 
+      and hospitality to suit your needs. Explore our cozy single rooms, spacious doubles, or luxurious suites.
+    </p>
+    <p>
+      Book your stay today and experience the difference at DreamStay.
+    </p>
+    <button data-page="rooms" class="btn primary nav-btn">Explore Our Rooms</button>
+  </div>
+</section>
+
+    <!-- ROOMS -->
+    <section id="rooms" class="rooms">
+  <h2>Our Rooms</h2>
+  <div class="room-container">
+    <div class="room-card">
+      <img src="C:\Users\sahas\OneDrive\Desktop\devops/1.jpg" alt="Single Room">
+      <h3>Single Room</h3>
+      <p>Perfect for solo travelers with all modern facilities.</p>
+      <span class="price"> 7,155 night</span>
+      <button class="btn">Book Now</button>
+    </div>
+
+    <div class="room-card">
+      <img src="C:\Users\sahas\OneDrive\Desktop\devops/2.jpg" alt="Double Room">
+      <h3>Double Room</h3>
+      <p>Ideal for two guests, cozy and comfortable.</p>
+      <span class="price">9,450 night</span>
+      <button class="btn">Book Now</button>
+    </div>
+
+    <div class="room-card">
+      <img src="C:\Users\sahas\OneDrive\Desktop\devops/3.jpg" alt="Suite Room">
+      <h3>Luxury Suite</h3>
+      <p>Spacious suite with premium amenities.</p>
+      <span class="price">18,000 night</span>
+      <button class="btn">Book Now</button>
+    </div>
+  </div>
+</section>
+
+
+    <!-- BOOKING -->
+    <section id="page-book" class="page">
+      <h2>Make a Booking</h2>
+      <form id="booking-form" class="card">
+        <label>Full name
+          <input type="text" id="guest-name" required />
+        </label>
+
+        <label>Room type
+          <select id="room-select"></select>
+        </label>
+
+        <div class="row">
+          <label>Check-in
+            <input type="date" id="checkin" required />
+          </label>
+          <label>Check-out
+            <input type="date" id="checkout" required />
+          </label>
+        </div>
+
+        <label>Guests
+          <input type="number" id="guests" min="1" value="1" />
+        </label>
+
+        <div class="summary card" id="booking-summary" aria-live="polite">
+          <strong>Summary:</strong>
+          <p id="summary-text">Select dates and room to see price.</p>
+        </div>
+
+        <div class="row">
+          <button type="button" id="calc-btn" class="btn">Calculate</button>
+          <button type="submit" class="btn primary">Confirm Booking</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- BOOKINGS -->
+    <section id="page-bookings" class="page">
+      <h2>Your Bookings</h2>
+      <div id="bookings-list" class="grid"></div>
+    </section>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
